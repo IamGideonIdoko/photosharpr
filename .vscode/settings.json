@@ -1,0 +1,15 @@
+{
+    "emmet.excludeLanguages": [
+        "markdown"
+    ],
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+},
+"rc-beautify": {
+
+    "insize": 2,
+    "inchar": " ",
+    "bracepadding": false,
+    "wrap": 80
+}
+}

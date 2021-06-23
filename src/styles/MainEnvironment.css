@@ -1,0 +1,49 @@
+.main-environment {
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.preview-container {
+    border: 1px groove #d9d9d943;
+    background-color: var(--bg-color-darker);
+    /* padding: 1rem; */
+    border-radius: 0.2rem;
+    max-width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+.preview {
+    min-width: 30rem;
+    min-height: 30rem;
+    height: 30rem;
+    width: 30rem;
+    max-width: 100%;
+    background-color: white;
+    margin: 2rem auto;
+    box-shadow: var(--shadow-lg);
+
+
+}
+
+.preview-label {
+    display: inline-block;    /* background-color: black; */
+    color: black;
+    padding: 0rem 0.2rem;
+    position: absolute;
+    z-index: 8;
+    font-size: 1.2rem;
+    right: 0;
+}
+
+.original-label,
+.output-label {
+    transform: translateX(1rem);
+    border-color: grey !important;
+}
+
+#output-label,
+#original-label {
+    border-color: grey !important;
+}
