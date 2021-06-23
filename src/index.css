@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 @font-face {
   font-family: Nunito;
   src: url('./fonts/Nunito-Regular.ttf');
 }
-
-
 
 :root {
   --bg-color: #EEF1F4;

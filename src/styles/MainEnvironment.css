@@ -23,8 +23,12 @@
     background-color: white;
     margin: 2rem auto;
     box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
 
-
+.preview > div {
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .preview-label {
@@ -46,4 +50,14 @@
 #output-label,
 #original-label {
     border-color: grey !important;
+}
+
+.preview {
+    position: relative !important;
+}
+
+.preview span {
+    position: absolute !important;
+    top: 0;
+    left: 0;
 }

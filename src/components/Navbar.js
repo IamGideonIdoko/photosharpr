@@ -42,7 +42,7 @@ const Navbar = (props) => {
                                 <Dropdown.Item className="fs-16" onClick={() => props.closeAllSidebars()}>Show none</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
-                        <Dropdown text='Canvas View' pointing='right' className='link item fs-16'>
+                        <Dropdown text='Preview' pointing='right' className='link item fs-16'>
                             <Dropdown.Menu className="fs-16">
                                 <Dropdown.Item className="fs-16">Show only original</Dropdown.Item>
                                 <Dropdown.Item className="fs-16">Show only output</Dropdown.Item>

@@ -6,3 +6,7 @@ export const ACTIVATE_ONLY_RIGHT_SIDEBAR = "ACTIVATE_ONLY_RIGHT_SIDEBAR";
 
 /* File Reducer */
 export const LOAD_FILE_INPUT = "LOAD_FILE_INPUT";
+
+/* Current Reducer */
+export const LOAD_CURRENT_FILElIST = "LOAD_CURRENT_FILElIST";
+export const POPULATE_FILE_INFO = "POPULATE_FILE_INFO";
