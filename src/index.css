@@ -23,7 +23,7 @@
   --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   --navbar-height: 6rem;
   --left-sidebar-width: 12rem;
-  --right-sidebar-width: 25rem;
+  --right-sidebar-width: 30rem;
   --font-family: Nunito, Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
@@ -79,4 +79,8 @@ code {
 
 h1, h2, h3, h4, h5, h6, a {
   font-family: var(--font-family) !important;
+}
+
+h3 {
+  font-size: 1.7rem !important;
 }

@@ -1,6 +1,7 @@
 
 import {Icon, Menu, Popup} from 'semantic-ui-react';
 import { connect } from 'react-redux';
+import RightSidebar from './../components/RightSidebar';
 import '../styles/WithSidebars.css';
 
 const WithSidebars = ({ children, sidebar, file }) => {
@@ -122,7 +123,7 @@ const WithSidebars = ({ children, sidebar, file }) => {
                 </div>
 
                 <div className={`right-sidebar ${ !isRightSidebarOpen && "closed" }`}>
-                    Add more manipulation to the photo.
+                    <RightSidebar />
                 </div>
 
                 <div className={`middle-content ${ (!isLeftSidebarOpen && isRightSidebarOpen) ? "no-left-sidebar" : (isLeftSidebarOpen && !isRightSidebarOpen) ? "no-right-sidebar" : (isLeftSidebarOpen && isRightSidebarOpen) ? "" : "no-sidebars" }`}>

@@ -1,0 +1,24 @@
+.rs-accordion-title {
+    background-color: var(--bg-color);
+    padding: 1rem 0.5rem !important;
+    font-weight: 600;
+}
+
+.rs-accordion-content {
+    border: 0.5rem solid var(--bg-color);
+    padding: 0.5rem !important;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.img-info-list {
+    font-size: 1.4rem;
+}
+
+.img-info-list li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

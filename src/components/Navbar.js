@@ -34,7 +34,7 @@ const Navbar = (props) => {
                         <Dropdown.Item className="fs-16" text='Presets' disabled />
                         <Dropdown.Item className="fs-16" icon='trash' disabled text='Reset'/>
                         <Dropdown.Divider/>
-                        <Dropdown text='Sidebars' pointing='right' className='link item fs-16'>
+                        <Dropdown text='Sidebars' pointing="right" className='link item fs-16'>
                             <Dropdown.Menu className="fs-16">
                                 <Dropdown.Item className="fs-16" onClick={() => props.openOnlyLeftSidebar()}>Show only left</Dropdown.Item>
                                 <Dropdown.Item className="fs-16" onClick={() => props.openOnlyRightSidebar()}>Show only right</Dropdown.Item>

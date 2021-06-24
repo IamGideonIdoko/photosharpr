@@ -4,7 +4,8 @@
 }
 
 .preview-container {
-    border: 1px groove #d9d9d943;
+    /* border: 1px groove #d9d9d943; */
+    box-shadow: var(--shadow-lg);
     background-color: var(--bg-color-darker);
     /* padding: 1rem; */
     border-radius: 0.2rem;
