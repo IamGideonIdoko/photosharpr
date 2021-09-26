@@ -1,6 +1,6 @@
 import {Dropdown} from 'semantic-ui-react';
 import {connect} from 'react-redux';
-import {closeAllSidebars, openAllSidebars, openOnlyLeftSidebar, openOnlyRightSidebar} from './../reduxstore/actions/sidebarActions';
+import {closeAllSidebars, openAllSidebars, openOnlyLeftSidebar, openOnlyRightSidebar} from '../reduxstore/actions/sidebarActions';
 import '../styles/Navbar.css';
 
 const Navbar = (props) => {

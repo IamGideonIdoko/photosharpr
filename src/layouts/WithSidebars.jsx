@@ -1,7 +1,7 @@
 
 import {Icon, Menu, Popup} from 'semantic-ui-react';
 import { connect } from 'react-redux';
-import RightSidebar from './../components/RightSidebar';
+import RightSidebar from '../components/RightSidebar';
 import '../styles/WithSidebars.css';
 
 const WithSidebars = ({ children, sidebar, file }) => {

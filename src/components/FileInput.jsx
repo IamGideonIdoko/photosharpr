@@ -1,8 +1,8 @@
 import {useEffect, useRef, Fragment} from 'react';
 import {connect} from 'react-redux';
-import {populateFileInfo, loadCurrentFilelist} from './../reduxstore/actions/currentFileActions';
-import {loadFileInput} from './../reduxstore/actions/fileActions';
-import {createOutputCanvas} from './../helper';
+import {populateFileInfo, loadCurrentFilelist} from '../reduxstore/actions/currentFileActions';
+import {loadFileInput} from '../reduxstore/actions/fileActions';
+import {createOutputCanvas} from '../utils/helper';
 
 const FileInput = ({loadFileInput, file, populateFileInfo, loadCurrentFilelist, currentFile}) => {
     const fileUploadInputElement = useRef(null);
