@@ -85,6 +85,7 @@ export const createOutputCanvas = (file, canvasParentId, option, populateFileInf
                 } else if (canvasImg.src.indexOf(".gif") > -1) {
                     blob = canvas.toDataURL("image/gif");
                 } else {
+                    // eslint-disable-next-line no-unused-vars
                     blob = canvas.toDataURL("image/png");
                 }
             }
