@@ -19,6 +19,10 @@
     -o-border-radius: 0.2rem;
 }
 
+.preview-container::-webkit-scrollbar {
+    width: 0px !important;
+}
+
 .preview {
     min-width: 30rem;
     min-height: 30rem;
@@ -40,10 +44,10 @@
     display: inline-block;    /* background-color: black; */
     color: black;
     padding: 0rem 0.2rem;
-    position: absolute;
+    position: fixed;
     z-index: 8;
     font-size: 1.2rem;
-    right: 0;
+    text-align: right;
 }
 
 .original-label,

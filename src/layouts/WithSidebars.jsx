@@ -13,7 +13,7 @@ const WithSidebars = ({ children }) => {
 
     const handleFileSelect = () => {
         // triger file input
-        file.fileUploadInputElement.click();
+        file.fileUploadInputElementLoaded && window.fileUploadInputElement.click();
     }
 
 

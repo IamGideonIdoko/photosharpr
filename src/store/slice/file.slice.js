@@ -3,11 +3,12 @@ import {createSlice} from '@reduxjs/toolkit';
 const fileSlice = createSlice({
     name: 'file',
     initialState: {
-        fileUploadInputElement: null
+        fileUploadInputElementLoaded: false
     },
     reducers: {
         loadFileInput: (state, action) => {
-            state.fileUploadInputElement = action.payload;
+            window.fileUploadInputElement = action.payload;
+            state.fileUploadInputElementLoaded = true
         }
     },
     extraReducers: {}

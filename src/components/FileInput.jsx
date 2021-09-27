@@ -7,12 +7,11 @@ import {useSelector, useDispatch} from 'react-redux';
 const FileInput = () => {
     const dispatch = useDispatch();
     const fileUploadInputElement = useRef(null);
-    const file = useSelector(state => state.file);
     const currentFile = useSelector(state => state.currentFile);
 
     useEffect(() => {
         // load the upload input into the redux store when the component loads
-        dispatch(loadFileInput(fileUploadInputElement.current));
+        dispatch(loadFileInput(document.querySelector('#fileUploadInputElement')));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -106,8 +105,8 @@ const FileInput = () => {
 
     // useEffect to house change events
     useEffect(() => {
-        if (file.fileUploadInputElement) {
-            file
+        if (window.fileUploadInputElement) {
+            window
                 .fileUploadInputElement
                 .addEventListener('change', function () {
 
@@ -188,7 +187,7 @@ const FileInput = () => {
                 })
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [file.fileUploadInputElement, dispatch, currentFile])
+    }, [window.fileUploadInputElement, dispatch, currentFile])
 
     return (
         <Fragment>
