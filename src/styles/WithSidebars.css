@@ -75,9 +75,14 @@
     position: fixed !important;
     background-color: white;
     padding: 1rem;
-    box-shadow: var(--shadow-lg);    
+    box-shadow: var(--shadow-lg);
     right: 0;
-    height: 100%;
+    height: calc(100% - var(--navbar-height));
+    top: var(--navbar-height);
     width: var(--right-sidebar-width);
     transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
 }

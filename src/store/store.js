@@ -6,12 +6,13 @@ import thunk from 'redux-thunk';
 import currentFileReducer from '@store/slice/currentFile.slice';
 import fileReducer from '@store/slice/file.slice';
 import sidebarReducer from '@store/slice/sidebar.slice';
+import environmentReducer from '@store/slice/environment.slice';
 
 const reducers = combineReducers({
     currentFile: currentFileReducer,
     file: fileReducer,
-    sidebar: sidebarReducer
-
+    sidebar: sidebarReducer,
+    environment: environmentReducer
 });
 
 const persistConfig = {

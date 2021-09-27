@@ -1,6 +1,7 @@
 import {Dropdown} from 'semantic-ui-react';
 import {useDispatch} from 'react-redux';
 import {closeAllSidebars, openAllSidebars, openOnlyLeftSidebar, openOnlyRightSidebar} from '@store/slice/sidebar.slice';
+import {closeAllPreviews, openAllPreviews, openOnlyOriginal, openOnlyOutput} from '@store/slice/environment.slice';
 import '@styles/Navbar.css';
 
 const Navbar = (props) => {
@@ -47,9 +48,10 @@ const Navbar = (props) => {
                         </Dropdown>
                         <Dropdown text='Preview' pointing='right' className='link item fs-16'>
                             <Dropdown.Menu className="fs-16">
-                                <Dropdown.Item className="fs-16">Show only original</Dropdown.Item>
-                                <Dropdown.Item className="fs-16">Show only output</Dropdown.Item>
-                                <Dropdown.Item className="fs-16">Show both</Dropdown.Item>
+                                <Dropdown.Item className="fs-16" onClick={() => dispatch(openOnlyOriginal())}>Show only original</Dropdown.Item>
+                                <Dropdown.Item className="fs-16" onClick={() => dispatch(openOnlyOutput())}>Show only output</Dropdown.Item>
+                                <Dropdown.Item className="fs-16" onClick={() => dispatch(openAllPreviews())}>Show both</Dropdown.Item>
+                                <Dropdown.Item className="fs-16" onClick={() => dispatch(closeAllPreviews())}>Show none</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown.Divider/>
