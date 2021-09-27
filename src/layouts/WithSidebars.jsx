@@ -52,7 +52,7 @@ const WithSidebars = ({ children }) => {
                             trigger={
                             <Menu.Item as='a' className="fs-14">
                                 <Icon name='camera retro'/>
-                                <small>Enhance Photo</small>
+                                <small>Enhance</small>
                             </Menu.Item>
                             }
                         />
@@ -63,7 +63,7 @@ const WithSidebars = ({ children }) => {
                             trigger={
                             <Menu.Item as='a' className="fs-14">
                                 <Icon name='smile'/>
-                                <small>Toonize Photo</small>
+                                <small>Toonize</small>
                             </Menu.Item>
                             }
                         />
@@ -74,7 +74,7 @@ const WithSidebars = ({ children }) => {
                             trigger={
                             <Menu.Item as='a' className="fs-14">
                                 <Icon name='adjust'/>
-                                <small>Colorize Photo</small>
+                                <small>Colorize</small>
                             </Menu.Item>
                             }
                         />
@@ -85,7 +85,7 @@ const WithSidebars = ({ children }) => {
                             trigger={
                             <Menu.Item as='a' className="fs-14">
                                 <Icon name='bolt'/>
-                                <small>Texturize Photo</small>
+                                <small>Texturize</small>
                             </Menu.Item>
                             }
                         />
