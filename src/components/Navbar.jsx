@@ -1,9 +1,12 @@
 import {Dropdown} from 'semantic-ui-react';
-import {connect} from 'react-redux';
-import {closeAllSidebars, openAllSidebars, openOnlyLeftSidebar, openOnlyRightSidebar} from '../reduxstore/actions/sidebarActions';
-import '../styles/Navbar.css';
+import {useDispatch} from 'react-redux';
+import {closeAllSidebars, openAllSidebars, openOnlyLeftSidebar, openOnlyRightSidebar} from '@store/slice/sidebar.slice';
+import '@styles/Navbar.css';
 
 const Navbar = (props) => {
+    const dispatch = useDispatch();
+
+    // const sidebar = useSelector(state => state.sidebar);
 
     /* document
         .addEventListener('keydown', function (event) {
@@ -36,10 +39,10 @@ const Navbar = (props) => {
                         <Dropdown.Divider/>
                         <Dropdown text='Sidebars' pointing="right" className='link item fs-16'>
                             <Dropdown.Menu className="fs-16">
-                                <Dropdown.Item className="fs-16" onClick={() => props.openOnlyLeftSidebar()}>Show only left</Dropdown.Item>
-                                <Dropdown.Item className="fs-16" onClick={() => props.openOnlyRightSidebar()}>Show only right</Dropdown.Item>
-                                <Dropdown.Item className="fs-16" onClick={() => props.openAllSidebars()}>Show both</Dropdown.Item>
-                                <Dropdown.Item className="fs-16" onClick={() => props.closeAllSidebars()}>Show none</Dropdown.Item>
+                                <Dropdown.Item className="fs-16" onClick={() => dispatch(openOnlyLeftSidebar())}>Show only left</Dropdown.Item>
+                                <Dropdown.Item className="fs-16" onClick={() => dispatch(openOnlyRightSidebar())}>Show only right</Dropdown.Item>
+                                <Dropdown.Item className="fs-16" onClick={() => dispatch(openAllSidebars())}>Show both</Dropdown.Item>
+                                <Dropdown.Item className="fs-16" onClick={() => dispatch(closeAllSidebars())}>Show none</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown text='Preview' pointing='right' className='link item fs-16'>
@@ -59,6 +62,4 @@ const Navbar = (props) => {
     )
 }
 
-const mapStateToProps = (state, ownProps) => ({sidebar: state.sidebar})
-
-export default connect(mapStateToProps, {closeAllSidebars, openAllSidebars, openOnlyLeftSidebar, openOnlyRightSidebar})(Navbar);
+export default Navbar;

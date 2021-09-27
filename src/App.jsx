@@ -1,5 +1,5 @@
-import Home from './pages/Home';
-import PhotosharprApp from './pages/PhotosharprApp';
+import Home from '@pages/Home';
+import PhotosharprApp from '@pages/PhotosharprApp';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 

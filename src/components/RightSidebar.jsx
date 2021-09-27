@@ -1,11 +1,15 @@
 import {useState} from 'react';
 import {Accordion, Icon} from 'semantic-ui-react';
-import {connect} from 'react-redux';
-import '../styles/RightSidebar.css'
+import { useSelector } from 'react-redux';
+import '@styles/RightSidebar.css'
 
-const RightSidebar = ({currentImageInfo, isImageLoaded}) => {
+const RightSidebar = () => {
     const [activeIndex,
         setActiveIndex] = useState([0]);
+
+
+    const currentImageInfo = useSelector(state => state.currentFile.currentImageInfo);
+    const isImageLoaded = useSelector(state => state.currentFile.isImageLoaded);
 
     const handleAccordionTitleClick = (e, titleProps) => {
         const {index} = titleProps;
@@ -30,7 +34,7 @@ const RightSidebar = ({currentImageInfo, isImageLoaded}) => {
                     onClick={handleAccordionTitleClick}
                     className="rs-accordion-title">
                     <Icon name="info circle"/>
-                    Image Details
+                    Image Details 
                 </Accordion.Title>
                 <Accordion.Content
                     className="rs-accordion-content"
@@ -105,6 +109,5 @@ const RightSidebar = ({currentImageInfo, isImageLoaded}) => {
     )
 }
 
-const mapStateToProps = (state, ownProps) => ({currentImageInfo: state.currentFile.currentImageInfo, isImageLoaded: state.currentFile.isImageLoaded})
 
-export default connect(mapStateToProps, null)(RightSidebar);
+export default RightSidebar;

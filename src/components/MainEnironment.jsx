@@ -1,5 +1,5 @@
 import {Label} from 'semantic-ui-react';
-import '../styles/MainEnvironment.css';
+import '@styles/MainEnvironment.css';
 
 const MainEnvironment = () => {
     return (

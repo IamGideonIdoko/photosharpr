@@ -1,12 +1,15 @@
 
 import {Icon, Menu, Popup} from 'semantic-ui-react';
-import { connect } from 'react-redux';
-import RightSidebar from '../components/RightSidebar';
-import '../styles/WithSidebars.css';
+import { useSelector } from 'react-redux';
+import RightSidebar from '@components/RightSidebar';
+import '@styles/WithSidebars.css';
 
-const WithSidebars = ({ children, sidebar, file }) => {
+const WithSidebars = ({ children }) => {
 
-    const { isLeftSidebarOpen, isRightSidebarOpen } = sidebar;
+
+    const isLeftSidebarOpen = useSelector(state => state.sidebar.isLeftSidebarOpen);
+    const isRightSidebarOpen = useSelector(state => state.sidebar.isRightSidebarOpen);
+    const file = useSelector(state => state.file);
 
     const handleFileSelect = () => {
         // triger file input
@@ -134,9 +137,5 @@ const WithSidebars = ({ children, sidebar, file }) => {
     )
 }
 
-const mapStateToProps = (state, ownProps) => ({
-    sidebar: state.sidebar,
-    file: state.file
-})
 
-export default connect(mapStateToProps, null)(WithSidebars);
+export default WithSidebars;
